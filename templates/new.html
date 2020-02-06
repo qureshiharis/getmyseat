@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Event
+{% endblock %}
+
+{% block main %}
+
+<style>
+
+  button.btn-primary  {
+    margin-left:80px;
+  }
+
+  legend {
+    font-weight: bold;
+    margin-left: 80px;
+  }
+
+  label {
+    margin-left: 80px;
+  }
+
+
+  </style>
+
+
+    <form action="/new" method="post">
+      <fieldset>
+        <legend>Add event</legend>
+
+
+        <label>Event name<br/>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="title" placeholder="Title of event" type="text">
+            </div>
+          </label><br/>
+
+          <label>Event details<br/>
+            <div class="form-group">
+              <textarea class="form-control" name="description" rows="3" placeholder="Description of the event, who is this event for? Is it open for all? What is it about?"></textarea>
+            </div>
+          </label><br/>
+
+          <label>Event date<br/>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="eventdate" placeholder="Event date" type="date">
+            </div>
+          </label><br/>
+
+          <label>Event location<br/>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="location" placeholder="i.e IBA Karachi" type="text">
+            </div>
+          </label><br/>
+
+          <label>Event deadline<br/>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="eventdeadline" placeholder="Event deadline" type="date">
+            </div>
+          </label><br/>
+
+
+          <label>Apply link<br/>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="applylink" placeholder="https link" type="text">
+            </div>
+          </label><br/>
+
+          </fieldset>
+
+
+            <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+{% endblock %}

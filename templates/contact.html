@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+{% block main %}
+
+<style>
+
+  button.btn-primary  {
+    margin-left:80px;
+    margin-right:200px;
+  }
+
+  div.form-group {
+    margin-left:80px;
+    margin-right: 60px;
+  }
+
+  legend {
+    font-weight: bold;
+    margin-left: 80px;
+  }
+
+  </style>
+
+    <form action="/contact" method="post">
+<fieldset>
+  <legend>Contact us</legend>
+
+    <div class="form-group">
+      <textarea class="form-control" name="detail" rows="3" placeholder="Enter your query/suggestion/anything"></textarea>
+    </div>
+<br/>
+
+    <div class="form-group">
+        <input class="form-control" name="email" placeholder="Your email" type="email">
+    </div>
+<br/>
+
+</fieldset>
+
+<button class="btn btn-primary" type="submit">Send</button>
+
+
+
+    </form>
+{% endblock %}

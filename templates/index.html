@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+
+<style>
+  div.card {
+    display:inline-block;
+    margin: 20px;
+  }
+
+  h5.card-title {
+    font-weight: bold;
+  }
+
+  </style>
+
+
+  {% for transaction in transactions %}
+
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ transaction.title}}</h5>
+    <p class="card-text">{{ transaction.description}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Event date: {{ transaction.eventdate }}</li>
+    <li class="list-group-item">Location: {{ transaction.location }}</li>
+    <li class="list-group-item">Event deadline: {{ transaction.eventdeadline }}</li>
+  </ul>
+  <div class="card-body">
+    <a href="{{ transaction.applylink }}" class="card-link">Apply now</a>
+  </div>
+</div>
+
+
+  {% endfor %}
+
+{% endblock %}
